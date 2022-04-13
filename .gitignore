@@ -1,0 +1,8 @@
+# lock file
+!yarn.lock
+
+# Dependency directory
+node_modules
+
+# Documentation
+/gh-pages

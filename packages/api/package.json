@@ -1,0 +1,13 @@
+{
+  "name": "api",
+  "private": true,
+  "description": "API to write tests running in the browser",
+  "type": "module",
+  "source": "src/mod.ts",
+  "types": "dist/mod.d.ts",
+  "main": "dist/mod.cjs",
+  "esmodule": "dist/mod.mjs",
+  "dependencies": {
+    "emittery": "*"
+  }
+}

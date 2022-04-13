@@ -1,0 +1,120 @@
+{
+  "name": "xn--mxaac",
+  "description": "Test runner for browser libraries.",
+  "version": "0.0.0",
+  "license": "AGPL-3.0",
+  "author": "make-github-pseudonymous-again",
+  "homepage": "https://xn-js-b9bae.github.io/xn--mxaac",
+  "repository": {
+    "url": "https://github.com/xn-js-b9bae/xn--mxaac",
+    "type": "git"
+  },
+  "bugs": {
+    "url": "https://github.com/xn-js-b9bae/xn--mxaac/issues"
+  },
+  "keywords": [
+    "aba",
+    "ava",
+    "browser",
+    "test"
+  ],
+  "type": "module",
+  "types": "packages/api/dist/mod.d.ts",
+  "exports": {
+    "import": "./packages/api/dist/mod.mjs",
+    "require": "./packages/api/dist/mod.cjs"
+  },
+  "bin": {
+    "aba": "packages/cli/dist/main.mjs"
+  },
+  "files": [
+    "packages/*/dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "npm-run-all --parallel build:*",
+    "build-docs": "typedoc packages/api/src/mod.ts --tsconfig packages/api/tsconfig.json --name αβα",
+    "build-gh-pages": "yarn build-docs --out gh-pages",
+    "build:api": "microbundle --cwd packages/api --tsconfig packages/api/tsconfig.json --target web --format modern,cjs && cp -l packages/api/dist/api/src/mod.d.ts packages/api/dist/mod.d.ts",
+    "build:cli": "microbundle --cwd packages/cli --tsconfig packages/cli/tsconfig.json --target node --format modern",
+    "commit-msg": "commitlint --edit",
+    "install-hooks": "husky install",
+    "lint": "xo",
+    "lint-and-fix": "xo --fix",
+    "lint-config": "fixpack --dryRun package.json packages/*/package.json",
+    "lint-config-and-fix": "fixpack package.json packages/*/package.json || fixpack package.json packages/*/package.json",
+    "postinstall": "yarn install-hooks",
+    "precommit": "lint-staged",
+    "prepare": "playwright install && yarn build",
+    "release": "np --message ':hatching_chick: release: Bumping to v%s.'",
+    "test": "ava",
+    "tsc": "tsc",
+    "tsc:watch": "yarn tsc -- --noErrorTruncation --watch"
+  },
+  "dependencies": {
+    "@rollup/plugin-commonjs": "^21.1.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.2.1",
+    "@rollup/plugin-typescript": "^8.3.2",
+    "chalk": "^5.0.1",
+    "ci-info": "^3.3.0",
+    "emittery": "^0.10.2",
+    "express": "^4.17.3",
+    "figures": "^4.0.1",
+    "get-port": "^6.1.2",
+    "globby": "^13.1.1",
+    "matcher": "^5.0.0",
+    "ms": "^2.1.3",
+    "p-queue": "^7.2.0",
+    "playwright": "^1.21.1",
+    "rollup": "^2.70.2",
+    "supertap": "^3.0.1",
+    "yargs": "^17.4.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "16.2.3",
+    "@js-library/commitlint-config": "0.0.4",
+    "@types/express": "4.17.13",
+    "@types/ms": "0.7.31",
+    "@types/yargs": "17.0.10",
+    "ansi-escapes": "5.0.0",
+    "ava": "4.2.0",
+    "fixpack": "4.0.0",
+    "husky": "7.0.4",
+    "lint-staged": "12.4.0",
+    "microbundle": "0.14.2",
+    "np": "7.6.1",
+    "npm-run-all": "4.1.5",
+    "ts-node": "10.7.0",
+    "typedoc": "0.22.15",
+    "typedoc-plugin-coverage": "1.0.2",
+    "typescript": "4.6.3",
+    "xo": "0.48.0"
+  },
+  "ava": {
+    "files": [
+      "test/src/**/*"
+    ],
+    "extensions": {
+      "ts": "module"
+    },
+    "nodeArguments": [
+      "--loader=ts-node/esm",
+      "--experimental-specifier-resolution=node"
+    ]
+  },
+  "prettier": {
+    "trailingComma": "all"
+  },
+  "xo": {
+    "prettier": true,
+    "rules": {
+      "unicorn/filename-case": "off",
+      "@typescript-eslint/naming-convention": "off",
+      "import/extensions": "off",
+      "unicorn/prefer-node-protocol": "off"
+    }
+  }
+}

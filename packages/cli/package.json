@@ -1,0 +1,29 @@
+{
+  "name": "cli",
+  "private": true,
+  "description": "CLI to run tests written with the API",
+  "type": "module",
+  "source": "src/main.ts",
+  "main": "dist/main.cjs",
+  "esmodule": "dist/main.mjs",
+  "dependencies": {
+    "@rollup/plugin-commonjs": "*",
+    "@rollup/plugin-json": "*",
+    "@rollup/plugin-node-resolve": "*",
+    "@rollup/plugin-typescript": "*",
+    "chalk": "*",
+    "ci-info": "*",
+    "emittery": "*",
+    "express": "*",
+    "figures": "*",
+    "get-port": "*",
+    "globby": "*",
+    "matcher": "*",
+    "ms": "*",
+    "p-queue": "*",
+    "playwright": "*",
+    "rollup": "*",
+    "supertap": "*",
+    "yargs": "*"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "lib",
+  "private": true,
+  "description": "Library shared by the CLI and the API",
+  "type": "module",
+  "dependencies": {
+    "emittery": "*"
+  }
+}
