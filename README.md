@@ -10,6 +10,20 @@ happening in real browsers. The only alternatives I know of are `jest`'s `jsdom`
 polyfilling, but that is not a real browser, or setting up everything by hand
 which is better done once correctly.
 
+[![License](https://img.shields.io/github/license/xn-js-b9bae/xn--mxaac.svg)](https://raw.githubusercontent.com/xn-js-b9bae/xn--mxaac/main/LICENSE)
+[![Version](https://img.shields.io/npm/v/xn--mxaac.svg)](https://www.npmjs.org/package/xn--mxaac)
+[![Tests](https://img.shields.io/github/workflow/status/xn-js-b9bae/xn--mxaac/ci?event=push&label=tests)](https://github.com/xn-js-b9bae/xn--mxaac/actions/workflows/ci.yml?query=branch:main)
+[![Dependencies](https://img.shields.io/librariesio/github/xn-js-b9bae/xn--mxaac.svg)](https://github.com/xn-js-b9bae/xn--mxaac/network/dependencies)
+[![GitHub issues](https://img.shields.io/github/issues/xn-js-b9bae/xn--mxaac.svg)](https://github.com/xn-js-b9bae/xn--mxaac/issues)
+[![Downloads](https://img.shields.io/npm/dm/xn--mxaac.svg)](https://www.npmjs.org/package/xn--mxaac)
+
+[![Code issues](https://img.shields.io/codeclimate/issues/xn-js-b9bae/xn--mxaac.svg)](https://codeclimate.com/github/xn-js-b9bae/xn--mxaac/issues)
+[![Code maintainability](https://img.shields.io/codeclimate/maintainability/xn-js-b9bae/xn--mxaac.svg)](https://codeclimate.com/github/xn-js-b9bae/xn--mxaac/trends/churn)
+[![Code coverage (cov)](https://img.shields.io/codecov/c/gh/xn-js-b9bae/xn--mxaac/main.svg)](https://codecov.io/gh/xn-js-b9bae/xn--mxaac)
+[![Code technical debt](https://img.shields.io/codeclimate/tech-debt/xn-js-b9bae/xn--mxaac.svg)](https://codeclimate.com/github/xn-js-b9bae/xn--mxaac/trends/technical_debt)
+[![Documentation](https://xn-js-b9bae.github.io/xn--mxaac/badge.svg)](https://xn-js-b9bae.github.io/xn--mxaac/source.html)
+[![Package size](https://img.shields.io/bundlephobia/minzip/xn--mxaac)](https://bundlephobia.com/result?p=xn--mxaac)
+
 
 ## :warning: Caveats
 
