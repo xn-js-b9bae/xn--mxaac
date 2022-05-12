@@ -21,7 +21,7 @@ which is better done once correctly.
 [![Code maintainability](https://img.shields.io/codeclimate/maintainability/xn-js-b9bae/xn--mxaac.svg)](https://codeclimate.com/github/xn-js-b9bae/xn--mxaac/trends/churn)
 [![Code coverage (cov)](https://img.shields.io/codecov/c/gh/xn-js-b9bae/xn--mxaac/main.svg)](https://codecov.io/gh/xn-js-b9bae/xn--mxaac)
 [![Code technical debt](https://img.shields.io/codeclimate/tech-debt/xn-js-b9bae/xn--mxaac.svg)](https://codeclimate.com/github/xn-js-b9bae/xn--mxaac/trends/technical_debt)
-[![Documentation](https://xn-js-b9bae.github.io/xn--mxaac/badge.svg)](https://xn-js-b9bae.github.io/xn--mxaac/source.html)
+[![Documentation](https://xn-js-b9bae.github.io/xn--mxaac/coverage.svg)](https://xn-js-b9bae.github.io/xn--mxaac/modules.html)
 [![Package size](https://img.shields.io/bundlephobia/minzip/xn--mxaac)](https://bundlephobia.com/result?p=xn--mxaac)
 
 
