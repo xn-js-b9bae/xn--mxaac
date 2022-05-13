@@ -82,7 +82,7 @@
     "ansi-escapes": "5.0.0",
     "ava": "4.2.0",
     "fixpack": "4.0.0",
-    "husky": "7.0.4",
+    "husky": "8.0.1",
     "lint-staged": "12.4.1",
     "microbundle": "0.14.2",
     "np": "7.6.1",
