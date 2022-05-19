@@ -2,7 +2,6 @@ import assert from 'assert';
 import process from 'process';
 import path from 'path';
 import PQueue from 'p-queue';
-import priorityQueue from 'p-queue/dist/priority-queue';
 import {globby} from 'globby';
 import {isMatch} from 'matcher';
 import Emittery from 'emittery';
@@ -30,7 +29,7 @@ export interface Options {
 }
 
 type Reporter = Emittery;
-type Queue = PQueue<priorityQueue>;
+type Queue = PQueue;
 
 export interface Runtime {
 	fileServer: TestFileServer;
