@@ -13,7 +13,7 @@ const tsc = async (paths) => {
 		include: paths,
 	};
 	await writeFile(lintStagedTSConfigPath, JSON.stringify(lintStagedTSConfig));
-	return `yarn tsc -- --noEmit --project ${lintStagedTSConfigPath}`;
+	return `yarn tsc --noEmit --project ${lintStagedTSConfigPath}`;
 };
 
 const lint = 'yarn lint-and-fix';

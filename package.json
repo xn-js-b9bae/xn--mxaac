@@ -49,9 +49,9 @@
     "precommit": "lint-staged",
     "prepare": "playwright install && yarn build",
     "release": "np --message ':hatching_chick: release: Bumping to v%s.'",
-    "test": "ava",
-    "tsc": "tsc",
-    "tsc:watch": "yarn tsc -- --noErrorTruncation --watch"
+    "tc": "tsc --noEmit",
+    "tc:watch": "yarn tc --noErrorTruncation --watch",
+    "test": "ava"
   },
   "dependencies": {
     "@rollup/plugin-commonjs": "^22.0.0",
