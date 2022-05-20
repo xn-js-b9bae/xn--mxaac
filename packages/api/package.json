@@ -6,7 +6,10 @@
   "source": "src/mod.ts",
   "types": "dist/mod.d.ts",
   "main": "dist/mod.cjs",
-  "esmodule": "dist/mod.mjs",
+  "exports": {
+    "require": "./dist/mod.cjs",
+    "default": "./dist/mod.mjs"
+  },
   "dependencies": {
     "emittery": "*"
   }

@@ -5,7 +5,9 @@
   "type": "module",
   "source": "src/main.ts",
   "main": "dist/main.cjs",
-  "esmodule": "dist/main.mjs",
+  "exports": {
+    "default": "./dist/main.mjs"
+  },
   "dependencies": {
     "@rollup/plugin-commonjs": "*",
     "@rollup/plugin-json": "*",

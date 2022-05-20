@@ -42,7 +42,6 @@
   ],
   "sortedSubItems": [
     "keywords",
-    "exports",
     "files",
     "scripts",
     "bundledDependencies",
