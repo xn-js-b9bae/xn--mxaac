@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import process from 'process';
 import ms from 'ms';
 import chalk from 'chalk';
@@ -28,7 +30,7 @@ const exit = (rc: number, message?: string) => {
 		);
 	}
 
-	process.exit(rc); // eslint-disable-line unicorn/no-process-exit
+	process.exit(rc);
 };
 
 aba({
