@@ -5352,10 +5352,10 @@ micro-spelling-correcter@^1.1.1:
   resolved "https://registry.yarnpkg.com/micro-spelling-correcter/-/micro-spelling-correcter-1.1.1.tgz#805a06a26ccfcad8f3e5c6a1ac5ff29d4530166e"
   integrity sha512-lkJ3Rj/mtjlRcHk6YyCbvZhyWTOzdBvTHsxMmZSk5jxN1YyVSQ+JETAom55mdzfcyDrY/49Z7UCW760BK30crg==
 
-microbundle@0.14.2:
-  version "0.14.2"
-  resolved "https://registry.yarnpkg.com/microbundle/-/microbundle-0.14.2.tgz#2db869c8145bd159aa55058ead47223f58f93bf2"
-  integrity sha512-jODALfU3w7jnJAqw7Tou9uU8e8zH0GRVWzOd/V7eAvD1fsfb9pyMbmzhFZqnX6SCb54eP1EF5oRyNlSxBAxoag==
+microbundle@0.15.0:
+  version "0.15.0"
+  resolved "https://registry.yarnpkg.com/microbundle/-/microbundle-0.15.0.tgz#d5a63ce02271b20d79fd30d83a123aaf962a5191"
+  integrity sha512-EkFst5ntLXoQGewkvga/Kd72RcN7IuJRl5ivLihJSbvLfJQo8LDS0n9X0q81vegiC59vhtKIM6qjrl1fOAtuGw==
   dependencies:
     "@babel/core" "^7.12.10"
     "@babel/plugin-proposal-class-properties" "7.12.1"
@@ -5393,6 +5393,7 @@ microbundle@0.14.2:
     rollup-plugin-postcss "^4.0.0"
     rollup-plugin-terser "^7.0.2"
     rollup-plugin-typescript2 "^0.29.0"
+    rollup-plugin-visualizer "^5.6.0"
     sade "^1.7.4"
     terser "^5.7.0"
     tiny-glob "^0.2.8"
@@ -6918,6 +6919,16 @@ rollup-plugin-typescript2@^0.29.0:
     resolve "1.17.0"
     tslib "2.0.1"
 
+rollup-plugin-visualizer@^5.6.0:
+  version "5.7.1"
+  resolved "https://registry.yarnpkg.com/rollup-plugin-visualizer/-/rollup-plugin-visualizer-5.7.1.tgz#7af30b02e6579155368a90b37b6ee9137b391d06"
+  integrity sha512-E/IgOMnmXKlc6ICyf53ok1b6DxPeNVUs3R0kYYPuDpGfofT4bkiG+KtSMlGjMACFmfwbbqTVDZBIF7sMZVKJbA==
+  dependencies:
+    nanoid "^3.3.4"
+    open "^8.4.0"
+    source-map "^0.7.3"
+    yargs "^17.5.1"
+
 rollup-pluginutils@^2.8.2:
   version "2.8.2"
   resolved "https://registry.yarnpkg.com/rollup-pluginutils/-/rollup-pluginutils-2.8.2.tgz#72f2af0748b592364dbd3389e600e5a9444a351e"
@@ -7184,6 +7195,11 @@ source-map@^0.6.0, source-map@^0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
   integrity sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==
+
+source-map@^0.7.3:
+  version "0.7.4"
+  resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.7.4.tgz#a9bbe705c9d8846f4e08ff6765acf0f1b0898656"
+  integrity sha512-l3BikUxvPOcn5E74dZiq5BGsTb5yEwhaTSzccU6t4sDOH8NWJCstKO5QT2CvtFoK6F0saL7p9xHAqHOlCPJygA==
 
 source-map@~0.8.0-beta.0:
   version "0.8.0-beta.0"
