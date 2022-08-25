@@ -3046,10 +3046,10 @@ emittery@^0.11.0:
   resolved "https://registry.yarnpkg.com/emittery/-/emittery-0.11.0.tgz#eb5f756a200d3431de2c6e850cb2d8afd97a03b9"
   integrity sha512-S/7tzL6v5i+4iJd627Nhv9cLFIo5weAIlGccqJFpnBoDB8U1TF2k5tez4J/QNuxyyhWuFqHg1L84Kd3m7iXg6g==
 
-emittery@^0.12.0:
-  version "0.12.0"
-  resolved "https://registry.yarnpkg.com/emittery/-/emittery-0.12.0.tgz#023e186c2634be64e986f37a51beb482a21e434d"
-  integrity sha512-Tg0E2rMgVVrjgrE4xOBk05F/weoWD59lw7LHTyX5sXmJE0jA0osiCmtD3/tArZ6YVckajyB1/iEx/ZQF3Qi2ag==
+emittery@^0.13.0:
+  version "0.13.1"
+  resolved "https://registry.yarnpkg.com/emittery/-/emittery-0.13.1.tgz#c04b8c3457490e0847ae51fced3af52d338e3dad"
+  integrity sha512-DeWwawk6r5yR9jFgnDKYt4sLS0LmHJJi3ZOnb5/JdbYwj3nW+FxQnHIjhBKz8YLC7oRNPVM9NQ47I3CVx34eqQ==
 
 emoji-regex@^8.0.0:
   version "8.0.0"
