@@ -4,6 +4,6 @@
   "description": "Library shared by the CLI and the API",
   "type": "module",
   "dependencies": {
-    "emittery": "*"
+    "emittery": "1.0.0"
   }
 }
