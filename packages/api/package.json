@@ -11,6 +11,6 @@
     "default": "./dist/mod.mjs"
   },
   "dependencies": {
-    "emittery": "*"
+    "emittery": "1.0.0"
   }
 }
