@@ -1,5 +1,6 @@
 import assert from 'assert';
-import {ModuleFormat, rollup} from 'rollup';
+import type {ModuleFormat} from 'rollup';
+import {rollup} from 'rollup';
 
 import typescript from '@rollup/plugin-typescript';
 import {nodeResolve} from '@rollup/plugin-node-resolve';

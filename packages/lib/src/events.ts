@@ -1,36 +1,36 @@
-interface TestFileIdentifier {
+type TestFileIdentifier = {
 	path: string;
-}
+};
 
-interface TestIdentifier extends TestFileIdentifier {
+type TestIdentifier = {
 	title: string;
-}
+} & TestFileIdentifier;
 
-interface TestDeclareEvent extends TestIdentifier {
+type TestDeclareEvent = {
 	type: 'test-declare';
-}
+} & TestIdentifier;
 
-interface TestQueueEvent extends TestIdentifier {
+type TestQueueEvent = {
 	type: 'test-queue';
-}
+} & TestIdentifier;
 
-interface TestStartEvent extends TestIdentifier {
+type TestStartEvent = {
 	type: 'test-start';
-}
+} & TestIdentifier;
 
-export interface ErrorDescription {
+export type ErrorDescription = {
 	message: string;
 	stack: string | undefined;
-}
+};
 
-interface TestFailEvent extends TestIdentifier {
+type TestFailEvent = {
 	type: 'test-fail';
 	error: ErrorDescription;
-}
+} & TestIdentifier;
 
-interface TestPassEvent extends TestIdentifier {
+type TestPassEvent = {
 	type: 'test-pass';
-}
+} & TestIdentifier;
 
 type TestEvent =
 	| TestDeclareEvent
@@ -39,24 +39,24 @@ type TestEvent =
 	| TestFailEvent
 	| TestPassEvent;
 
-interface FatalErrorEvent extends TestFileIdentifier {
+type FatalErrorEvent = {
 	type: 'error';
 	error: ErrorDescription;
-}
+} & TestFileIdentifier;
 
-interface ParsedEvent extends TestFileIdentifier {
+type ParsedEvent = {
 	type: 'parsed';
-}
+} & TestFileIdentifier;
 
 export type RunEvent = TestEvent | FatalErrorEvent | ParsedEvent;
 
 export type RunEventWithDateTime = RunEvent & {datetime: Date};
 
-export interface TestHistory {
+export type TestHistory = {
 	queued: boolean;
 	running: boolean;
 	done: boolean;
 	pass: boolean;
 	fail: boolean;
 	errors: ErrorDescription[];
-}
+};

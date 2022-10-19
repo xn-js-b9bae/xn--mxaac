@@ -1,4 +1,4 @@
-import {RunEvent} from '../../lib/src/events';
+import type {RunEvent} from '../../lib/src/events';
 import {create} from './channel/dom'; // TODO allow any implementation given by s
 
 const path = decodeURIComponent(

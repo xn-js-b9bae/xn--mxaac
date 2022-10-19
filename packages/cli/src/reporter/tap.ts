@@ -1,9 +1,10 @@
 import os from 'os';
-import {Writable} from 'stream';
+import type {Writable} from 'stream';
 import Emittery from 'emittery';
 import * as supertap from 'supertap';
-import {ErrorDescription, RunEvent} from '../../../lib/src/events';
-import {create as createState, State} from '../../../lib/src/state';
+import type {ErrorDescription, RunEvent} from '../../../lib/src/events';
+import type {State} from '../../../lib/src/state';
+import {create as createState} from '../../../lib/src/state';
 
 const dumpError = (error: ErrorDescription) => {
 	return {...error};

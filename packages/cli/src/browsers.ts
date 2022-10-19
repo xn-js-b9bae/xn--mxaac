@@ -1,4 +1,5 @@
-import {chromium, firefox, webkit, BrowserType} from 'playwright';
+import type {BrowserType} from 'playwright';
+import {chromium, firefox, webkit} from 'playwright';
 
 export const browsers: Record<string, BrowserType> = {
 	chromium,

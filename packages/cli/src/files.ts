@@ -1,9 +1,9 @@
 import assert from 'assert';
 
 import process from 'process';
-import {Server} from 'http';
+import type {Server} from 'http';
 import express from 'express';
-import {Express} from 'express-serve-static-core';
+import type {Express} from 'express-serve-static-core';
 import getPort, {portNumbers} from 'get-port';
 import {encodeTestPath, encodeTestTitle} from '../../lib/src/uri';
 import {bundle} from './bundle';

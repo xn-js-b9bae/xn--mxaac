@@ -4,12 +4,13 @@ import path from 'path';
 import PQueue from 'p-queue';
 import {globby} from 'globby';
 import {isMatch} from 'matcher';
-import Emittery from 'emittery';
+import type Emittery from 'emittery';
 import {browsers} from './browsers';
 import {devices} from './devices';
 import {create as createReporter} from './reporter/tap';
 import {TestFileServer} from './files';
-import {setupWorker, WorkerOptions} from './channel/dom';
+import type {WorkerOptions} from './channel/dom';
+import {setupWorker} from './channel/dom';
 
 const testFileFilter = (testFile: string) => {
 	const basename = path.basename(testFile);
@@ -20,22 +21,22 @@ const crash = (error: Error) => {
 	console.error('uncaught error', error);
 };
 
-export interface Options {
+export type Options = {
 	pattern: string[] | undefined;
 	browsers: readonly string[];
 	devices: readonly string[];
 	concurrency: number;
 	match: readonly string[];
-}
+};
 
 type Reporter = Emittery;
 type Queue = PQueue;
 
-export interface Runtime {
+export type Runtime = {
 	fileServer: TestFileServer;
 	reporter: Reporter;
 	queue: Queue;
-}
+};
 
 export const aba = async (
 	options: Options,

@@ -1,6 +1,6 @@
-import {Browser, Page} from 'playwright';
-import {RunEventWithDateTime} from '../../../lib/src/events';
-import {Device} from '../devices';
+import type {Browser, Page} from 'playwright';
+import type {RunEventWithDateTime} from '../../../lib/src/events';
+import type {Device} from '../devices';
 
 const sleep = async (ms: number) =>
 	new Promise<void>((resolve) => {
@@ -34,10 +34,10 @@ export const pollEvents = async function* (
 	}
 };
 
-export interface WorkerOptions {
+export type WorkerOptions = {
 	device?: Device;
 	browser: Browser;
-}
+};
 
 export const setupWorker = async (
 	{device, browser}: WorkerOptions,

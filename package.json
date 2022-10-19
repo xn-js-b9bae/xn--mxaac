@@ -37,7 +37,7 @@
     "build": "npm-run-all --parallel build:*",
     "build-docs": "typedoc packages/api/src/mod.ts --tsconfig packages/api/tsconfig.json --name αβα",
     "build-gh-pages": "yarn build-docs --out gh-pages",
-    "build:api": "rm -rf packages/api/dist && microbundle --cwd packages/api --target web --format modern,cjs && cp -l packages/api/dist/packages/api/src/mod.d.ts packages/api/dist/mod.d.ts",
+    "build:api": "rm -rf packages/api/dist && microbundle --cwd packages/api --target web --format modern,cjs && cp -l packages/api/dist/api/src/mod.d.ts packages/api/dist/mod.d.ts",
     "build:cli": "rm -rf packages/cli/dist && microbundle --cwd packages/cli --target node --format modern",
     "commit-msg": "commitlint --edit",
     "install-hooks": "husky install",
@@ -59,21 +59,21 @@
     "@rollup/plugin-commonjs": "^23.0.0",
     "@rollup/plugin-json": "^5.0.0",
     "@rollup/plugin-node-resolve": "^15.0.0",
-    "@rollup/plugin-typescript": "^9.0.0",
-    "chalk": "^5.0.1",
-    "ci-info": "^3.3.1",
+    "@rollup/plugin-typescript": "^9.0.1",
+    "chalk": "^5.1.2",
+    "ci-info": "^3.5.0",
     "emittery": "^1.0.0",
-    "express": "^4.18.1",
+    "express": "^4.18.2",
     "figures": "^5.0.0",
     "get-port": "^6.1.2",
-    "globby": "^13.1.1",
+    "globby": "^13.1.2",
     "matcher": "^5.0.0",
     "ms": "^2.1.3",
-    "p-queue": "^7.2.0",
-    "playwright": "^1.22.2",
-    "rollup": "^3.0.0",
+    "p-queue": "^7.3.0",
+    "playwright": "^1.27.1",
+    "rollup": "^3.2.3",
     "supertap": "^3.0.1",
-    "yargs": "^17.5.1"
+    "yargs": "^17.6.0"
   },
   "devDependencies": {
     "@commitlint/cli": "17.1.2",
@@ -86,7 +86,7 @@
     "fixpack": "4.0.0",
     "husky": "8.0.1",
     "lint-staged": "13.0.3",
-    "microbundle": "0.14.2",
+    "microbundle": "0.15.1",
     "np": "7.6.2",
     "npm-run-all": "4.1.5",
     "pinst": "3.0.0",
@@ -94,7 +94,7 @@
     "typedoc": "0.23.17",
     "typedoc-plugin-coverage": "2.0.0",
     "typescript": "4.8.4",
-    "xo": "0.49.0"
+    "xo": "0.52.4"
   },
   "ava": {
     "files": [
@@ -117,6 +117,7 @@
       "unicorn/filename-case": "off",
       "@typescript-eslint/naming-convention": "off",
       "import/extensions": "off",
+      "n/file-extension-in-import": "off",
       "unicorn/prefer-node-protocol": "off"
     }
   }
