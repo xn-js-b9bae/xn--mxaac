@@ -92,7 +92,7 @@
     "pinst": "3.0.0",
     "ts-node": "10.9.1",
     "typedoc": "0.25.0",
-    "typedoc-plugin-coverage": "2.1.0",
+    "typedoc-plugin-coverage": "2.2.0",
     "typescript": "5.2.2",
     "xo": "0.52.4"
   },
