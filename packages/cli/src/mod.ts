@@ -94,7 +94,7 @@ export const queueAllTestsOfTestFile = async (
 	for await (const event of worker.messages()) {
 		assert(event.path === path);
 		switch (event.type) {
-			case 'test-declare':
+			case 'test-declare': {
 				if (
 					options.match === undefined ||
 					isMatch(event.title, options.match)
@@ -107,10 +107,15 @@ export const queueAllTestsOfTestFile = async (
 				}
 
 				break;
-			case 'parsed':
+			}
+
+			case 'parsed': {
 				return;
-			default:
+			}
+
+			default: {
 				break;
+			}
 		}
 	}
 
@@ -132,18 +137,23 @@ export const runOneTestIsolated = async (
 		runtime.reporter.emit('event', event).catch(crash);
 		assert(event.path === path);
 		switch (event.type) {
-			case 'error':
+			case 'error': {
 				// TODO proper cleanup
 				// exit(1, `Error executing ${event.path}: ${JSON.stringify(event.error, undefined, 2)}`);
 				// eslint-disable-next-line no-labels
 				break polling;
+			}
+
 			case 'test-pass':
-			case 'test-fail':
+			case 'test-fail': {
 				assert(event.title === title);
 				// eslint-disable-next-line no-labels
 				break polling;
-			default:
+			}
+
+			default: {
 				break;
+			}
 		}
 	}
 

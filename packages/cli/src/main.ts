@@ -33,17 +33,21 @@ const exit = (rc: number, message?: string) => {
 	process.exit(rc);
 };
 
-aba({
-	pattern,
-	match,
-	browsers,
-	devices,
-	concurrency,
-})
-	.then(() => {
-		exit(0);
-	})
-	.catch((error) => {
-		console.error(error);
-		exit(1, error.message);
+try {
+	await aba({
+		pattern,
+		match: match.map((x) => x.toString()),
+		browsers,
+		devices,
+		concurrency,
 	});
+} catch (error) {
+	console.error(error);
+	if (error instanceof Error) {
+		exit(1, error.message);
+	} else {
+		exit(1, 'unknown error');
+	}
+}
+
+exit(0);

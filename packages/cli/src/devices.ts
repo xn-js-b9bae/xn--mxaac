@@ -1,6 +1,6 @@
 import {devices as playwrightDevices} from 'playwright';
 
-export type Device = typeof playwrightDevices[keyof typeof playwrightDevices];
+export type Device = (typeof playwrightDevices)[keyof typeof playwrightDevices];
 
 export type Devices = Record<string, Device | undefined>;
 

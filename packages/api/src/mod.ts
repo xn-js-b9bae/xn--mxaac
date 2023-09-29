@@ -70,7 +70,7 @@ const autorun = async () => {
 	}
 };
 
-let to: any;
+let to: ReturnType<typeof setTimeout> | undefined;
 
 const setupAutorun = () => {
 	to = setTimeout(autorun, 0);

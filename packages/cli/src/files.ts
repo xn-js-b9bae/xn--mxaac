@@ -1,5 +1,4 @@
 import assert from 'assert';
-
 import process from 'process';
 import type {Server} from 'http';
 import express from 'express';

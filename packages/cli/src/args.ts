@@ -16,7 +16,7 @@ const keepLastValue = <T>(value: T | T[]): T | undefined =>
 const options = {
 	concurrency: {
 		alias: 'c',
-		coerce: keepLastValue,
+		coerce: keepLastValue<number>,
 		description:
 			'Max number of test files running at the same time (default: CPU cores)',
 		type: 'number',

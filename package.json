@@ -53,34 +53,34 @@
     "release": "np --message ':hatching_chick: release: Bumping to v%s.'",
     "tc": "tsc --noEmit",
     "tc:watch": "yarn tc --noErrorTruncation --watch",
-    "test": "ava"
+    "test": "NODE_OPTIONS='--loader=tsx' ava"
   },
   "dependencies": {
-    "@rollup/plugin-commonjs": "^25.0.0",
+    "@rollup/plugin-commonjs": "^25.0.4",
     "@rollup/plugin-json": "^6.0.0",
-    "@rollup/plugin-node-resolve": "^15.0.0",
-    "@rollup/plugin-typescript": "^11.0.0",
-    "chalk": "^5.1.2",
-    "ci-info": "^3.5.0",
-    "emittery": "^1.0.0",
+    "@rollup/plugin-node-resolve": "^15.2.1",
+    "@rollup/plugin-typescript": "^11.1.4",
+    "chalk": "^5.3.0",
+    "ci-info": "^3.8.0",
+    "emittery": "^1.0.1",
     "express": "^4.18.2",
     "figures": "^5.0.0",
     "get-port": "^7.0.0",
-    "globby": "^13.1.2",
+    "globby": "^13.2.2",
     "matcher": "^5.0.0",
     "ms": "^2.1.3",
-    "p-queue": "^7.3.0",
-    "playwright": "^1.27.1",
-    "rollup": "^3.2.3",
+    "p-queue": "^7.4.1",
+    "playwright": "^1.38.1",
+    "rollup": "^3.29.4",
     "supertap": "^3.0.1",
-    "yargs": "^17.6.0"
+    "yargs": "^17.7.2"
   },
   "devDependencies": {
     "@commitlint/cli": "17.7.2",
     "@js-library/commitlint-config": "0.0.4",
     "@types/express": "4.17.18",
     "@types/ms": "0.7.32",
-    "@types/yargs": "17.0.13",
+    "@types/yargs": "17.0.26",
     "ansi-escapes": "6.2.0",
     "ava": "5.3.1",
     "fixpack": "4.0.0",
@@ -90,11 +90,11 @@
     "np": "8.0.4",
     "npm-run-all": "4.1.5",
     "pinst": "3.0.0",
-    "ts-node": "10.9.1",
+    "tsx": "^3.13.0",
     "typedoc": "0.25.1",
     "typedoc-plugin-coverage": "2.2.0",
     "typescript": "5.2.2",
-    "xo": "0.52.4"
+    "xo": "0.56.0"
   },
   "ava": {
     "files": [
@@ -102,11 +102,7 @@
     ],
     "extensions": {
       "ts": "module"
-    },
-    "nodeArguments": [
-      "--loader=ts-node/esm",
-      "--experimental-specifier-resolution=node"
-    ]
+    }
   },
   "prettier": {
     "trailingComma": "all"

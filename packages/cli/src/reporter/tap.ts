@@ -17,11 +17,14 @@ const title = (event: RunEvent) => {
 		case 'test-fail':
 		case 'test-declare':
 		case 'test-queue':
-		case 'test-start':
+		case 'test-start': {
 			return `${event.path} - ${event.title}`;
+		}
+
 		case 'error':
-		case 'parsed':
+		case 'parsed': {
 			return `${event.path}`;
+		}
 	}
 };
 
@@ -43,25 +46,38 @@ export const create = (reportStream: Writable): Emittery => {
 
 		// eslint-disable-next-line default-case
 		switch (event.type) {
-			case 'test-pass':
+			case 'test-pass': {
 				write = true;
 				passed = true;
 				break;
-			case 'test-fail':
+			}
+
+			case 'test-fail': {
 				write = true;
 				break;
-			case 'test-declare':
+			}
+
+			case 'test-declare': {
 				break;
-			case 'test-queue':
+			}
+
+			case 'test-queue': {
 				break;
-			case 'test-start':
+			}
+
+			case 'test-start': {
 				break;
-			case 'error':
+			}
+
+			case 'error': {
 				write = true;
 				error = event.error;
 				break;
-			case 'parsed':
+			}
+
+			case 'parsed': {
 				break;
+			}
 		}
 
 		if (write) {

@@ -4,7 +4,6 @@
 
 import {Buffer} from 'buffer';
 import stream from 'stream';
-
 import ansiEscapes from 'ansi-escapes';
 
 type Sanitizer = (chunk: string) => string;

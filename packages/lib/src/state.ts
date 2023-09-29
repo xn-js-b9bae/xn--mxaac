@@ -1,5 +1,4 @@
 import Emittery from 'emittery';
-
 import type {RunEvent, ErrorDescription, TestHistory} from './events';
 
 export type State = {
@@ -47,37 +46,50 @@ export const create = (): Emittery => {
 	emitter.on('event', (event: RunEvent) => {
 		// eslint-disable-next-line default-case
 		switch (event.type) {
-			case 'error':
+			case 'error': {
 				state.error = event.error;
 				break;
-			case 'test-declare':
+			}
+
+			case 'test-declare': {
 				++state.declared;
 				state.history[event.title] = initHistory();
 				break;
-			case 'test-queue':
+			}
+
+			case 'test-queue': {
 				state.history[event.title].queued = true;
 				++state.queued;
 				break;
-			case 'test-start':
+			}
+
+			case 'test-start': {
 				state.history[event.title].queued = false;
 				state.history[event.title].running = true;
 				break;
-			case 'test-pass':
+			}
+
+			case 'test-pass': {
 				state.history[event.title].running = false;
 				state.history[event.title].pass = true;
 				state.history[event.title].done = true;
 				++state.pass;
 				break;
-			case 'test-fail':
+			}
+
+			case 'test-fail': {
 				state.history[event.title].running = false;
 				state.history[event.title].fail = true;
 				state.history[event.title].done = true;
 				state.history[event.title].errors.push(event.error);
 				++state.fail;
 				break;
-			case 'parsed':
+			}
+
+			case 'parsed': {
 				state.parsed = true;
 				break;
+			}
 		}
 	});
 
