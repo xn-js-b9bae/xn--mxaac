@@ -4115,9 +4115,9 @@ figures@^5.0.0:
     is-unicode-supported "^1.2.0"
 
 figures@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/figures/-/figures-6.0.0.tgz#bb9d2c7ee314f258718b3d910a3e057bad7e3b1b"
-  integrity sha512-iFYUmtsOUeDFPdgzcIr6DLAH1d1x87NVPbPfMofNmTzBV3bMK5ugiMp72wuZ5mir+bsxppvczUqV8S9zXey0hw==
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/figures/-/figures-6.0.1.tgz#75a2baf3ca8c63e2ea253179e9f1157833587ea4"
+  integrity sha512-0oY/olScYD4IhQ8u//gCPA4F3mlTn2dacYmiDm/mbDQvpmLjV4uH+zhsQ5IyXRyvqkvtUkXkNdGvg5OFJTCsuQ==
   dependencies:
     is-unicode-supported "^2.0.0"
 
