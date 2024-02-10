@@ -9,3 +9,6 @@ node_modules
 
 # lint-staged
 .lint-staged.tsconfig.json
+
+# tsimp
+.tsimp
