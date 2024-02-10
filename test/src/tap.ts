@@ -1,5 +1,7 @@
 import {readdirSync} from 'fs';
+
 import test from 'ava';
+
 import {aba} from '../../packages/cli/src/mod';
 import {create as createReporter} from '../../packages/cli/src/reporter/tap';
 import TTYStream from '../helper/TTYStream';
@@ -26,7 +28,7 @@ const macro = test.macro({
 		);
 
 		tty.end();
-		const actual = tty.asBuffer().toString('utf8');
+		const actual = tty.toString();
 
 		t.snapshot(actual);
 	},

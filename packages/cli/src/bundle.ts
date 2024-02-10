@@ -1,10 +1,10 @@
 import assert from 'assert';
-import type {ModuleFormat} from 'rollup';
-import {rollup} from 'rollup';
-import typescript from '@rollup/plugin-typescript';
-import {nodeResolve} from '@rollup/plugin-node-resolve';
-import json from '@rollup/plugin-json';
+
 import commonjs from '@rollup/plugin-commonjs';
+import json from '@rollup/plugin-json';
+import {nodeResolve} from '@rollup/plugin-node-resolve';
+import typescript from '@rollup/plugin-typescript';
+import {rollup, type ModuleFormat} from 'rollup';
 
 const plugins = [
 	typescript({module: 'esnext', lib: ['esnext', 'dom']}),

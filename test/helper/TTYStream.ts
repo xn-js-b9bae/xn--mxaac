@@ -2,20 +2,26 @@
 // License: https://github.com/avajs/ava/blob/ae0042c95d2dbe72b4910931232ea15f6071e04e/license
 // Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
-import {Buffer} from 'buffer';
 import stream from 'stream';
+
 import ansiEscapes from 'ansi-escapes';
+import {concatUint8Arrays} from 'uint8array-extras';
 
 type Sanitizer = (chunk: string) => string;
 
 export default class TTYStream extends stream.Writable {
-	static SEPARATOR = Buffer.from('---tty-stream-chunk-separator\n', 'utf8');
+	static SEPARATOR: Uint8Array = new TextEncoder().encode(
+		'---tty-stream-chunk-separator\n',
+	);
 
 	readonly isTTY = true as const;
 	columns: number;
-	chunks: Buffer[] = [];
-	spinnerActivity: Buffer[] = [];
+	chunks: Uint8Array[] = [];
+	spinnerActivity: Uint8Array[] = [];
 	sanitizers: Sanitizer[] = [];
+
+	readonly #encoder: TextEncoder = new TextEncoder();
+	readonly #decoder: TextDecoder = new TextDecoder('utf8');
 
 	constructor(options: {columns: number; sanitizers?: Sanitizer[]}) {
 		super();
@@ -23,10 +29,10 @@ export default class TTYStream extends stream.Writable {
 		this.sanitizers = options.sanitizers ?? [];
 	}
 
-	_write(chunk: Buffer, _encoding: string, callback: () => void) {
+	_write(chunk: Uint8Array, _encoding: string, callback: () => void) {
 		if (this.spinnerActivity.length > 0) {
 			this.chunks.push(
-				Buffer.concat(this.spinnerActivity),
+				concatUint8Arrays(this.spinnerActivity),
 				TTYStream.SEPARATOR,
 			);
 			this.spinnerActivity = [];
@@ -35,21 +41,21 @@ export default class TTYStream extends stream.Writable {
 		// eslint-disable-next-line unicorn/no-array-reduce
 		const string = this.sanitizers.reduce(
 			(string_, sanitizer) => sanitizer(string_),
-			chunk.toString('utf8'),
+			this.#decoder.decode(chunk),
 		);
 		// Ignore the chunk if it was scrubbed completely. Still count 0-length
 		// chunks.
 		if (string !== '' || chunk.length === 0) {
-			this.chunks.push(Buffer.from(string, 'utf8'), TTYStream.SEPARATOR);
+			this.chunks.push(this.#encoder.encode(string), TTYStream.SEPARATOR);
 		}
 
 		callback();
 	}
 
-	_writev(chunks: Array<{chunk: Buffer}>, callback: () => void) {
+	_writev(chunks: Array<{chunk: Uint8Array}>, callback: () => void) {
 		if (this.spinnerActivity.length > 0) {
 			this.chunks.push(
-				Buffer.concat(this.spinnerActivity),
+				concatUint8Arrays(this.spinnerActivity),
 				TTYStream.SEPARATOR,
 			);
 			this.spinnerActivity = [];
@@ -57,13 +63,12 @@ export default class TTYStream extends stream.Writable {
 
 		for (const {chunk} of chunks) {
 			this.chunks.push(
-				Buffer.from(
+				this.#encoder.encode(
 					// eslint-disable-next-line unicorn/no-array-reduce
 					this.sanitizers.reduce(
 						(string, sanitizer) => sanitizer(string),
-						chunk.toString('utf8'),
+						this.#decoder.decode(chunk),
 					),
-					'utf8',
 				),
 			);
 		}
@@ -72,21 +77,26 @@ export default class TTYStream extends stream.Writable {
 		callback();
 	}
 
-	asBuffer() {
-		return Buffer.concat(this.chunks);
+	asUint8Array() {
+		return concatUint8Arrays(this.chunks);
+	}
+
+	toString() {
+		const array = this.asUint8Array();
+		return this.#decoder.decode(array);
 	}
 
 	clearLine() {
-		this.spinnerActivity.push(Buffer.from(ansiEscapes.eraseLine, 'ascii'));
+		this.spinnerActivity.push(this.#encoder.encode(ansiEscapes.eraseLine));
 	}
 
 	cursorTo(x: number, y: number) {
-		this.spinnerActivity.push(Buffer.from(ansiEscapes.cursorTo(x, y), 'ascii'));
+		this.spinnerActivity.push(this.#encoder.encode(ansiEscapes.cursorTo(x, y)));
 	}
 
 	moveCursor(dx: number, dy: number) {
 		this.spinnerActivity.push(
-			Buffer.from(ansiEscapes.cursorMove(dx, dy), 'ascii'),
+			this.#encoder.encode(ansiEscapes.cursorMove(dx, dy)),
 		);
 	}
 }

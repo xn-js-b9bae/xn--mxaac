@@ -1,4 +1,5 @@
 import Emittery from 'emittery';
+
 import type {RunEvent, ErrorDescription, TestHistory} from './events';
 
 export type State = {
@@ -93,8 +94,8 @@ export const create = (): Emittery => {
 		}
 	});
 
-	emitter.on('dump', (cb: (state: State) => void) => {
-		cb(state);
+	emitter.on('dump', (callback: (state: State) => void) => {
+		callback(state);
 	});
 
 	return emitter;

@@ -1,7 +1,8 @@
 import Emittery from 'emittery';
+
+import {create as createState, type State} from '../../../lib/src/state';
+
 import type {RunEvent, RunEventWithDateTime} from '../../../lib/src/events';
-import type {State} from '../../../lib/src/state';
-import {create as createState} from '../../../lib/src/state';
 
 export const create = (): Emittery => {
 	const emitter = new Emittery();

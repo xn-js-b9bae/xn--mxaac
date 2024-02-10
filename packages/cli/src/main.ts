@@ -1,9 +1,11 @@
 #!/usr/bin/env node
 
 import process from 'process';
-import ms from 'ms';
+
 import chalk from 'chalk';
 import figures from 'figures';
+import ms from 'ms';
+
 import {parse} from './args';
 import {aba} from './mod';
 

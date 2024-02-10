@@ -1,5 +1,6 @@
-import type {RunEvent} from '../../lib/src/events';
 import {create} from './channel/dom'; // TODO allow any implementation given by s
+
+import type {RunEvent} from '../../lib/src/events';
 
 const path = decodeURIComponent(
 	document.location.pathname.split('/').pop() ?? '',
@@ -28,13 +29,13 @@ const flush = async () => {
 
 const run = async (title: string) => {
 	console.error(`Running test ${title}`);
-	const testFn = _tests.get(title);
-	if (testFn === undefined) {
+	const testFunction = _tests.get(title);
+	if (testFunction === undefined) {
 		throw new Error(`could not find title ${title}`);
 	} else {
 		await emit({type: 'test-queue', path, title});
 		await flush();
-		await testFn().then(
+		await testFunction().then(
 			async () => {
 				await emit({type: 'test-pass', path, title});
 				return flush();
@@ -82,7 +83,7 @@ const cancelAutorun = () => {
 
 setupAutorun();
 
-const test = (title: string, testFn: Test) => {
+const test = (title: string, testFunction: Test) => {
 	if (_tests.has(title)) {
 		cancelAutorun();
 		const error = new Error(`duplicate title ${title}`);
@@ -95,7 +96,7 @@ const test = (title: string, testFn: Test) => {
 		return;
 	}
 
-	_tests.set(title, testFn);
+	_tests.set(title, testFunction);
 };
 
 export default test;

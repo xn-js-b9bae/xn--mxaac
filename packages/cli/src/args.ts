@@ -3,10 +3,13 @@
 // Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
 import os from 'os';
+
 import {isCI} from 'ci-info';
 import yargs from 'yargs';
 import {hideBin} from 'yargs/helpers';
+
 import {version} from '../../../package.json';
+
 import {browsers} from './browsers';
 import {devices} from './devices';
 
@@ -127,8 +130,8 @@ export const parse = async (input: string[]) => {
 	const concurrency = serial
 		? 1
 		: rest.concurrency !== undefined && rest.concurrency > 0
-		? rest.concurrency
-		: Math.min(os.cpus().length, isCI ? 2 : Number.POSITIVE_INFINITY);
+			? rest.concurrency
+			: Math.min(os.cpus().length, isCI ? 2 : Number.POSITIVE_INFINITY);
 
 	return {...rest, concurrency, pattern};
 };

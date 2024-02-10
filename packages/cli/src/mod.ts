@@ -1,16 +1,18 @@
 import assert from 'assert';
-import process from 'process';
 import path from 'path';
-import PQueue from 'p-queue';
+import process from 'process';
+
 import {globby} from 'globby';
 import {isMatch} from 'matcher';
-import type Emittery from 'emittery';
+import PQueue from 'p-queue';
+
 import {browsers} from './browsers';
+import {setupWorker, type WorkerOptions} from './channel/dom';
 import {devices} from './devices';
-import {create as createReporter} from './reporter/tap';
 import {TestFileServer} from './files';
-import type {WorkerOptions} from './channel/dom';
-import {setupWorker} from './channel/dom';
+import {create as createReporter} from './reporter/tap';
+
+import type Emittery from 'emittery';
 
 const testFileFilter = (testFile: string) => {
 	const basename = path.basename(testFile);

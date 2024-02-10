@@ -1,11 +1,15 @@
 import assert from 'assert';
 import process from 'process';
-import type {Server} from 'http';
+
 import express from 'express';
-import type {Express} from 'express-serve-static-core';
 import getPort, {portNumbers} from 'get-port';
+
 import {encodeTestPath, encodeTestTitle} from '../../lib/src/uri';
+
 import {bundle} from './bundle';
+
+import type {Express} from 'express-serve-static-core';
+import type {Server} from 'http';
 
 type Port = number | string;
 
@@ -13,7 +17,7 @@ export class TestFileServer {
 	#port: Port | undefined;
 	#app: Express | undefined;
 	#server: Server | undefined;
-	#bundleCache = new Map<string, Promise<string>>();
+	readonly #bundleCache = new Map<string, Promise<string>>();
 
 	close() {
 		if (this.#server !== undefined) {

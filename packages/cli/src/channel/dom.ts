@@ -1,6 +1,6 @@
-import type {Browser, Page} from 'playwright';
 import type {RunEventWithDateTime} from '../../../lib/src/events';
 import type {Device} from '../devices';
+import type {Browser, Page} from 'playwright';
 
 const sleep = async (ms: number) =>
 	new Promise<void>((resolve) => {
