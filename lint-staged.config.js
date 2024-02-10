@@ -22,7 +22,7 @@ const lintConfig = 'yarn lint-config-and-fix';
 const config = {
 	'*.{js,cjs,mjs,ts}': [lint],
 	'*.ts': [tsc],
-	'package.json,packages/*/package.json': [lintConfig],
+	'{package.json,packages/*/package.json}': [lintConfig],
 };
 
 export default config;
