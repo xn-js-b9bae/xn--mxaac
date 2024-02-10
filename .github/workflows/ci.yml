@@ -25,7 +25,7 @@ jobs:
         run: yarn build
 
       - name: Archive build 💽
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: packages-dist
           path: packages/*/dist/*
