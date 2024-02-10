@@ -82,7 +82,7 @@
     "@types/ms": "0.7.34",
     "@types/yargs": "17.0.32",
     "ansi-escapes": "6.2.0",
-    "ava": "6.0.1",
+    "ava": "6.1.1",
     "fixpack": "4.0.0",
     "husky": "9.0.10",
     "lint-staged": "15.2.0",
