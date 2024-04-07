@@ -91,7 +91,7 @@
     "npm-run-all2": "6.1.2",
     "pinst": "3.0.0",
     "tsimp": "2.0.11",
-    "typedoc": "0.25.12",
+    "typedoc": "0.25.13",
     "typedoc-plugin-coverage": "3.1.0",
     "typescript": "5.4.4",
     "uint8array-extras": "1.1.0",

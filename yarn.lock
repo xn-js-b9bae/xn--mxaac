@@ -8368,10 +8368,10 @@ typedoc-plugin-coverage@3.1.0:
   resolved "https://registry.yarnpkg.com/typedoc-plugin-coverage/-/typedoc-plugin-coverage-3.1.0.tgz#2848956f76e02f927f4c84e85d7ea00dd0e941c9"
   integrity sha512-fxeJRrxQR3yM/aFZU7mOuatgRCztiMCbeNiCRVZKY6VNgOcVMC1HS+ZfZnlbLLteUOdeWleSQ6yntuipz5zi6A==
 
-typedoc@0.25.12:
-  version "0.25.12"
-  resolved "https://registry.yarnpkg.com/typedoc/-/typedoc-0.25.12.tgz#f73f0a8d3731d418cc604d4230f95a857799e27a"
-  integrity sha512-F+qhkK2VoTweDXd1c42GS/By2DvI2uDF4/EpG424dTexSHdtCH52C6IcAvMA6jR3DzAWZjHpUOW+E02kyPNUNw==
+typedoc@0.25.13:
+  version "0.25.13"
+  resolved "https://registry.yarnpkg.com/typedoc/-/typedoc-0.25.13.tgz#9a98819e3b2d155a6d78589b46fa4c03768f0922"
+  integrity sha512-pQqiwiJ+Z4pigfOnnysObszLiU3mVLWAExSPf+Mu06G/qsc3wzbuM56SZQvONhHLncLUhYzOVkjFFpFfL5AzhQ==
   dependencies:
     lunr "^2.3.9"
     marked "^4.3.0"
