@@ -45,7 +45,6 @@ export const create = (): Emittery => {
 	});
 
 	emitter.on('event', (event: RunEvent) => {
-		// eslint-disable-next-line default-case
 		switch (event.type) {
 			case 'error': {
 				state.error = event.error;

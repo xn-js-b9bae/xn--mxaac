@@ -13,7 +13,6 @@ const dumpError = (error: ErrorDescription) => {
 };
 
 const title = (event: RunEvent) => {
-	// eslint-disable-next-line default-case
 	switch (event.type) {
 		case 'test-pass':
 		case 'test-fail':
@@ -46,7 +45,6 @@ export const create = (reportStream: Writable): Emittery => {
 		const todo = false;
 		let error;
 
-		// eslint-disable-next-line default-case
 		switch (event.type) {
 			case 'test-pass': {
 				write = true;
