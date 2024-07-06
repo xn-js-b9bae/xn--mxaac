@@ -8477,10 +8477,10 @@ uc.micro@^2.0.0, uc.micro@^2.1.0:
   resolved "https://registry.yarnpkg.com/uc.micro/-/uc.micro-2.1.0.tgz#f8d3f7d0ec4c3dea35a7e3c8efa4cb8b45c9e7ee"
   integrity sha512-ARDJmphmdvUk6Glw7y9DQ2bFkKBHwQHLi2lsaH6PPmz/Ka9sFOBsBluozhDltWmnv9u/cF6Rt87znRTPV+yp/A==
 
-uint8array-extras@1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/uint8array-extras/-/uint8array-extras-1.2.0.tgz#36a3138ba2d1c0bce9ab824f6f16bc783c20118f"
-  integrity sha512-+J8XoVf9Y/vyCz8Xp7kGRb6dVuC5qIIWibNrpIoYVcjJqBzdb+tbS2XunRO4dxPj0YGy1G+TvrQU2EYjF0LiBA==
+uint8array-extras@1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/uint8array-extras/-/uint8array-extras-1.3.0.tgz#0b2e511cfdd91e00b8f011ba6b850d7671f36fa2"
+  integrity sha512-npBAT0ZIX6mAIG7SF6G4LF1BIoRx3h+HVajSplHx0XmOD0Ug4qio5Yhcajn72i5OEj/qkk1OFaYh2PhqHBV33w==
 
 unbox-primitive@^1.0.2:
   version "1.0.2"
