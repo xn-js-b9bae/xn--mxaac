@@ -76,7 +76,7 @@
     "yargs": "^17.7.2"
   },
   "devDependencies": {
-    "@commitlint/cli": "19.6.1",
+    "@commitlint/cli": "19.7.1",
     "@js-library/commitlint-config": "0.0.4",
     "@types/express": "5.0.0",
     "@types/ms": "0.7.34",
