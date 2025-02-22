@@ -8498,10 +8498,10 @@ typedoc-plugin-coverage@3.4.1:
   resolved "https://registry.yarnpkg.com/typedoc-plugin-coverage/-/typedoc-plugin-coverage-3.4.1.tgz#13b445cecb674845945e218c4560bbd91299af83"
   integrity sha512-V23DAwinAMpGMGcL1R1s8Snr26hrjfIdwGf+4jR/65ZdmeAN+yRX0onfx5JlembTQhR6AePQ/parfQNS0AZ64A==
 
-typedoc@0.27.7:
-  version "0.27.7"
-  resolved "https://registry.yarnpkg.com/typedoc/-/typedoc-0.27.7.tgz#09047ffb5c845f45765de26c68b77260867fe967"
-  integrity sha512-K/JaUPX18+61W3VXek1cWC5gwmuLvYTOXJzBvD9W7jFvbPnefRnCHQCEPw7MSNrP/Hj7JJrhZtDDLKdcYm6ucg==
+typedoc@0.27.8:
+  version "0.27.8"
+  resolved "https://registry.yarnpkg.com/typedoc/-/typedoc-0.27.8.tgz#9d4c4aa3c6889090d8fa4776367e353697d3e706"
+  integrity sha512-q0/2TUunNEDmWkn23ULKGXieK8cgGuAmBUXC/HcZ/rgzMI9Yr4Nq3in1K1vT1NZ9zx6M78yTk3kmIPbwJgK5KA==
   dependencies:
     "@gerrit0/mini-shiki" "^1.24.0"
     lunr "^2.3.9"
