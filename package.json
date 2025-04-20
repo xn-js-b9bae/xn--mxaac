@@ -92,7 +92,7 @@
     "pinst": "3.0.0",
     "tsimp": "2.0.12",
     "typedoc": "0.28.3",
-    "typedoc-plugin-coverage": "3.4.1",
+    "typedoc-plugin-coverage": "4.0.1",
     "typescript": "5.5.4",
     "uint8array-extras": "1.4.0",
     "xo": "0.58.0"
