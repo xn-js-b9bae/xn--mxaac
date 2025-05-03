@@ -88,7 +88,7 @@
     "lint-staged": "15.5.1",
     "microbundle": "0.15.1",
     "np": "10.2.0",
-    "npm-run-all2": "7.0.2",
+    "npm-run-all2": "8.0.1",
     "pinst": "3.0.0",
     "tsimp": "2.0.12",
     "typedoc": "0.28.3",
