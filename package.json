@@ -73,7 +73,7 @@
     "playwright": "^1.38.1",
     "rollup": "^4.0.0",
     "supertap": "^3.0.1",
-    "yargs": "^17.7.2"
+    "yargs": "^18.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "19.8.1",
