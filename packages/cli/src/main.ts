@@ -4,7 +4,7 @@ import process from 'process';
 
 import chalk from 'chalk';
 import figures from 'figures';
-import ms from 'ms';
+import ms, {type StringValue} from 'ms';
 
 import {parse} from './args';
 import {aba} from './mod';
@@ -18,7 +18,7 @@ const {
 	concurrency,
 } = await parse(process.argv);
 
-const timeoutMs = ms(timeout as string);
+const timeoutMs = ms(timeout as StringValue);
 
 const to = setTimeout(() => {
 	exit(1, `Timeout (${timeout as string})`);
