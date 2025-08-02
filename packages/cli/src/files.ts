@@ -52,7 +52,8 @@ export class TestFileServer {
 		const _app = express();
 
 		_app.get('/html/:test', (request, response, _next) => {
-			console.error('get', request.url);
+			const {url} = request;
+			console.error('get', url);
 			response.end(
 				`
 	      <!DOCTYPE html>
@@ -68,14 +69,18 @@ export class TestFileServer {
 		});
 
 		_app.get('/script/:test', async (request, response, _next) => {
-			console.error('get', request.url, request.params.test);
-			const test = request.params.test;
+			const {
+				url,
+				params: {test},
+			} = request;
+			console.error('get', url, test);
 			const code = await this._bundle(test);
 			response.end(code);
 		});
 
 		_app.get('/*path', async (request, _response, _next) => {
-			console.error('get', request.url, 'unhandled');
+			const {url} = request;
+			console.error('get', url, 'unhandled');
 		});
 
 		const _port =

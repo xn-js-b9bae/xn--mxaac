@@ -95,7 +95,7 @@
     "typedoc-plugin-coverage": "4.0.1",
     "typescript": "5.9.2",
     "uint8array-extras": "1.4.0",
-    "xo": "0.58.0"
+    "xo": "0.61.1"
   },
   "ava": {
     "files": [
@@ -114,9 +114,12 @@
   "xo": {
     "prettier": true,
     "rules": {
+      "promise/prefer-await-to-then": "off",
+      "promise/prefer-catch": "off",
       "unicorn/filename-case": "off",
+      "unicorn/consistent-assert": "off",
       "@typescript-eslint/naming-convention": "off",
-      "import/order": [
+      "import-x/order": [
         "error",
         {
           "groups": [
@@ -152,7 +155,7 @@
           "warnOnUnassignedImports": true
         }
       ],
-      "import/extensions": "off",
+      "import-x/extensions": "off",
       "n/file-extension-in-import": "off",
       "unicorn/prefer-node-protocol": "off"
     }

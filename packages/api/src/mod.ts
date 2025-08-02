@@ -27,6 +27,15 @@ const flush = async () => {
 	return channel.emit('flush');
 };
 
+const _error = (error: unknown) => {
+	if (error instanceof Error) return error;
+
+	return {
+		message: 'unknown error',
+		stack: 'unknown error',
+	};
+};
+
 const run = async (title: string) => {
 	console.error(`Running test ${title}`);
 	const testFunction = _tests.get(title);
@@ -40,8 +49,8 @@ const run = async (title: string) => {
 				await emit({type: 'test-pass', path, title});
 				return flush();
 			},
-			async (error: Error) => {
-				const {message, stack} = error;
+			async (error: unknown) => {
+				const {message, stack} = _error(error);
 				console.error(`Test ${title} failed with error`, {error});
 				await emit({type: 'test-fail', path, title, error: {message, stack}});
 				return flush();
@@ -62,8 +71,8 @@ const autorun = async () => {
 	await emit({type: 'parsed', path});
 	await flush();
 	if (title !== '') {
-		run(title).catch(async (error: Error) => {
-			const {message, stack} = error;
+		run(title).catch(async (error: unknown) => {
+			const {message, stack} = _error(error);
 			await emit({type: 'error', path, error: {message, stack}});
 			await flush();
 			console.error(error);
@@ -90,7 +99,7 @@ const test = (title: string, testFunction: Test) => {
 		const {message, stack} = error;
 		emit({type: 'error', path, error: {message, stack}})
 			.then(flush)
-			.catch((error: Error) => {
+			.catch((error: unknown) => {
 				console.error('uncaught error', error);
 			});
 		return;

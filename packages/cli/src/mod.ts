@@ -95,6 +95,7 @@ export const queueAllTestsOfTestFile = async (
 
 	for await (const event of worker.messages()) {
 		assert(event.path === path);
+		// eslint-disable-next-line @typescript-eslint/switch-exhaustiveness-check
 		switch (event.type) {
 			case 'test-declare': {
 				if (
@@ -138,6 +139,7 @@ export const runOneTestIsolated = async (
 	polling: for await (const event of worker.messages()) {
 		runtime.reporter.emit('event', event).catch(crash);
 		assert(event.path === path);
+		// eslint-disable-next-line @typescript-eslint/switch-exhaustiveness-check
 		switch (event.type) {
 			case 'error': {
 				// TODO proper cleanup
