@@ -3,9 +3,9 @@ import os from 'os';
 import Emittery from 'emittery';
 import * as supertap from 'supertap';
 
-import {create as createState, type State} from '../../../lib/src/state';
+import {create as createState, type State} from '../../../lib/src/state.js';
 
-import type {ErrorDescription, RunEvent} from '../../../lib/src/events';
+import type {ErrorDescription, RunEvent} from '../../../lib/src/events.js';
 import type {Writable} from 'stream';
 
 const dumpError = (error: ErrorDescription) => {

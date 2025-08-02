@@ -4,9 +4,9 @@ import process from 'process';
 import express from 'express';
 import getPort, {portNumbers} from 'get-port';
 
-import {encodeTestPath, encodeTestTitle} from '../../lib/src/uri';
+import {encodeTestPath, encodeTestTitle} from '../../lib/src/uri.js';
 
-import {bundle} from './bundle';
+import {bundle} from './bundle.js';
 
 import type {Express} from 'express-serve-static-core';
 import type {Server} from 'http';

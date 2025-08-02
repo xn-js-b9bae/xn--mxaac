@@ -6,11 +6,11 @@ import {globby} from 'globby';
 import {isMatch} from 'matcher';
 import PQueue from 'p-queue';
 
-import {browsers} from './browsers';
-import {setupWorker, type WorkerOptions} from './channel/dom';
-import {devices} from './devices';
-import {TestFileServer} from './files';
-import {create as createReporter} from './reporter/tap';
+import {browsers} from './browsers.js';
+import {setupWorker, type WorkerOptions} from './channel/dom.js';
+import {devices} from './devices.js';
+import {TestFileServer} from './files.js';
+import {create as createReporter} from './reporter/tap.js';
 
 import type Emittery from 'emittery';
 

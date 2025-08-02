@@ -1,6 +1,6 @@
 import Emittery from 'emittery';
 
-import type {RunEvent, ErrorDescription, TestHistory} from './events';
+import type {RunEvent, ErrorDescription, TestHistory} from './events.js';
 
 export type State = {
 	parsed: boolean;

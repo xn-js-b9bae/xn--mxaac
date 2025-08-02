@@ -2,9 +2,9 @@ import {readdirSync} from 'fs';
 
 import test from 'ava';
 
-import {aba} from '../../packages/cli/src/mod';
-import {create as createReporter} from '../../packages/cli/src/reporter/tap';
-import TTYStream from '../helper/TTYStream';
+import {aba} from '../../packages/cli/src/mod.js';
+import {create as createReporter} from '../../packages/cli/src/reporter/tap.js';
+import TTYStream from '../helper/TTYStream.js';
 
 const fixtures = 'test/fixture/tap';
 

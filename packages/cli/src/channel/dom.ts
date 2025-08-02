@@ -1,5 +1,5 @@
-import type {RunEventWithDateTime} from '../../../lib/src/events';
-import type {Device} from '../devices';
+import type {RunEventWithDateTime} from '../../../lib/src/events.js';
+import type {Device} from '../devices.js';
 import type {Browser, Page} from 'playwright';
 
 const sleep = async (ms: number) =>
