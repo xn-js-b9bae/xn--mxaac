@@ -62,7 +62,7 @@
     "@rollup/plugin-typescript": "^12.1.4",
     "chalk": "^5.4.1",
     "ci-info": "^4.3.0",
-    "emittery": "^1.0.1",
+    "emittery": "^1.2.0",
     "express": "^5.1.0",
     "figures": "^6.0.0",
     "get-port": "^7.1.0",
