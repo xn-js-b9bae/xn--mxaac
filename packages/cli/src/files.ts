@@ -74,7 +74,7 @@ export class TestFileServer {
 			response.end(code);
 		});
 
-		_app.get('*', async (request, _response, _next) => {
+		_app.get('/*path', async (request, _response, _next) => {
 			console.error('get', request.url, 'unhandled');
 		});
 

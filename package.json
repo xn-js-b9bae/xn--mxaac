@@ -63,7 +63,7 @@
     "chalk": "^5.3.0",
     "ci-info": "^4.0.0",
     "emittery": "^1.0.1",
-    "express": "^4.18.2",
+    "express": "^5.1.0",
     "figures": "^6.0.0",
     "get-port": "^7.0.0",
     "globby": "^14.0.0",
@@ -78,7 +78,7 @@
   "devDependencies": {
     "@commitlint/cli": "19.8.1",
     "@js-library/commitlint-config": "0.0.4",
-    "@types/express": "5.0.1",
+    "@types/express": "5.0.3",
     "@types/ms": "2.1.0",
     "@types/yargs": "17.0.33",
     "ansi-escapes": "7.0.0",
