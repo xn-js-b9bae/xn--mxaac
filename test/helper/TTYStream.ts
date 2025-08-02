@@ -2,14 +2,14 @@
 // License: https://github.com/avajs/ava/blob/ae0042c95d2dbe72b4910931232ea15f6071e04e/license
 // Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
-import stream from 'stream';
+import {Writable} from 'stream';
 
 import ansiEscapes from 'ansi-escapes';
 import {concatUint8Arrays} from 'uint8array-extras';
 
 type Sanitizer = (chunk: string) => string;
 
-export default class TTYStream extends stream.Writable {
+export default class TTYStream extends Writable {
 	static SEPARATOR: Uint8Array = new TextEncoder().encode(
 		'---tty-stream-chunk-separator\n',
 	);
