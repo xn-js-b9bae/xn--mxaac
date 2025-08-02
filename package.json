@@ -64,7 +64,7 @@
     "ci-info": "^4.3.0",
     "emittery": "^1.2.0",
     "express": "^5.1.0",
-    "figures": "^6.0.0",
+    "figures": "^6.1.0",
     "get-port": "^7.1.0",
     "globby": "^14.1.0",
     "matcher": "^5.0.0",
