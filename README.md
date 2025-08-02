@@ -12,7 +12,7 @@ which is better done once correctly.
 
 [![License](https://img.shields.io/github/license/xn-js-b9bae/xn--mxaac.svg)](https://raw.githubusercontent.com/xn-js-b9bae/xn--mxaac/main/LICENSE)
 [![Version](https://img.shields.io/npm/v/xn--mxaac.svg)](https://www.npmjs.org/package/xn--mxaac)
-[![Tests](https://img.shields.io/github/workflow/status/xn-js-b9bae/xn--mxaac/ci?event=push&label=tests)](https://github.com/xn-js-b9bae/xn--mxaac/actions/workflows/ci.yml?query=branch:main)
+[![Tests](https://img.shields.io/github/actions/workflow/status/xn-js-b9bae/xn--mxaac/ci.yml?branch=main&event=push&label=tests)](https://github.com/xn-js-b9bae/xn--mxaac/actions/workflows/ci.yml?query=branch:main)
 [![Dependencies](https://img.shields.io/librariesio/github/xn-js-b9bae/xn--mxaac.svg)](https://github.com/xn-js-b9bae/xn--mxaac/network/dependencies)
 [![GitHub issues](https://img.shields.io/github/issues/xn-js-b9bae/xn--mxaac.svg)](https://github.com/xn-js-b9bae/xn--mxaac/issues)
 [![Downloads](https://img.shields.io/npm/dm/xn--mxaac.svg)](https://www.npmjs.org/package/xn--mxaac)
