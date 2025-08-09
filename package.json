@@ -95,7 +95,7 @@
     "typedoc-plugin-coverage": "4.0.1",
     "typescript": "5.9.2",
     "uint8array-extras": "1.4.0",
-    "xo": "0.61.1"
+    "xo": "1.2.1"
   },
   "ava": {
     "files": [
